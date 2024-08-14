@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    oracle:
+      url: jdbc:oracle:thin:@localhost:1521:xe
+      username: oracle_username
+      password: oracle_password
+      driver-class-name: oracle.jdbc.OracleDriver
+
+    sqlserver:
+      url: jdbc:sqlserver://localhost:1433;databaseName=mydatabase
+      username: sqlserver_username
+      password: sqlserver_password
+      driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+
+mybatis:
+  config-location: classpath:mybatis-config.xml
+  mapper-locations: classpath:mappers/**/*.xml
