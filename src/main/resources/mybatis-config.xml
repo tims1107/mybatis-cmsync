@@ -11,27 +11,27 @@
             <transactionManager type="JDBC"/>
             <dataSource type="POOLED">
                 <property name="driver" value="oracle.jdbc.OracleDriver"/>
-                <property name="url" value="jdbc:oracle:thin:@localhost:1521:xe"/>
-                <property name="username" value="oracle_username"/>
-                <property name="password" value="oracle_password"/>
+                <property name="url" value="jdbc:oracle:thin:@localhost:1521/ORCLPDB1"/>
+                <property name="username" value="tsmithers"/>
+                <property name="password" value="new_password"/>
             </dataSource>
         </environment>
 
         <!-- SQL Server Environment -->
-        <environment id="sqlserver">
-            <transactionManager type="JDBC"/>
-            <dataSource type="POOLED">
-                <property name="driver" value="com.microsoft.sqlserver.jdbc.SQLServerDriver"/>
-                <property name="url" value="jdbc:sqlserver://localhost:1433;databaseName=mydatabase"/>
-                <property name="username" value="sqlserver_username"/>
-                <property name="password" value="sqlserver_password"/>
-            </dataSource>
-        </environment>
+<!--        <environment id="sqlserver">-->
+<!--            <transactionManager type="JDBC"/>-->
+<!--            <dataSource type="POOLED">-->
+<!--                <property name="driver" value="com.microsoft.sqlserver.jdbc.SQLServerDriver"/>-->
+<!--                <property name="url" value="jdbc:sqlserver://localhost:1433;databaseName=mydatabase"/>-->
+<!--                <property name="username" value="sqlserver_username"/>-->
+<!--                <property name="password" value="sqlserver_password"/>-->
+<!--            </dataSource>-->
+<!--        </environment>-->
 
     </environments>
 
     <mappers>
-        <mapper resource="mappers/oracle/UserMapper.xml"/>
-        <mapper resource="mappers/sqlserver/UserMapper.xml"/>
+        <mapper resource="mappers/UserMapper.xml"/>
+<!--        <mapper resource="mappers/sqlserver/UserMapper.xml"/>-->
     </mappers>
 </configuration>
