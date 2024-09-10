@@ -2,6 +2,7 @@ package com.developerinc.mybatiscmsync.controller;
 
 import com.developerinc.mybatiscmsync.model.User;
 import com.developerinc.mybatiscmsync.service.UserService;
+import com.developerinc.mybatiscmsync.util.FileUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,6 +30,7 @@ public class UserController {
         try {
             logger.info("getAllUsers endpoint called");
             List<User> userList = userService.getAllUsers();
+
             if (userList == null) {
                 throw new RuntimeException("User list is null");
             }

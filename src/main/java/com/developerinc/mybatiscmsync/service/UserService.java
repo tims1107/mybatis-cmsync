@@ -2,12 +2,13 @@ package com.developerinc.mybatiscmsync.service;
 
 import com.developerinc.mybatiscmsync.mappers.UserMapper;
 import com.developerinc.mybatiscmsync.model.User;
+import jakarta.annotation.PostConstruct;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import javax.annotation.PostConstruct;
+
 import java.util.List;
 
 @Service
