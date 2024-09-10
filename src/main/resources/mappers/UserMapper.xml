@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.developerinc.mybatiscmsync.mapper.UserMapper">
+    <resultMap id="UserResultMap" type="com.developerinc.mybatiscmsync.model.User">
+        <id property="id" column="id"/>
+        <result property="username" column="username"/>
+        <result property="email" column="email"/>
+        <result property="created_at" column="created_at"/>
+    </resultMap>
+
+    <select id="findAll" resultMap="UserResultMap">
+        SELECT id, username, email, created_at FROM users
+    </select>
+</mapper>
